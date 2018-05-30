@@ -22,8 +22,13 @@ get "/testing" do
   erb "Hi there <%=2 + 2%>"
 end
 
-get "/named-cat" do
+post "/named-cat" do
   puts params
   @name = params[:name]
   erb(:index)
+end
+
+get "/form" do
+
+  erb(:forms)
 end
